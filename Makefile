@@ -9,4 +9,6 @@ FaustiOSHack_FILES = Tweak.mm
 FaustiOSHack_CFLAGS = -fobjc-arc -std=c++17
 FaustiOSHack_LIBRARIES = z
 
-include $(THEOS_MAKE_PATH)/tweak.mk
+# تعطيل التوقيع نهائياً لمنع استدعاء ldid
+after-stage::
+	@echo "Skipping signing..."
