@@ -9,7 +9,4 @@ FaustiOSHack_FILES = Tweak.mm
 FaustiOSHack_CFLAGS = -fobjc-arc -std=c++17
 FaustiOSHack_LIBRARIES = z
 
-# تعطيل التوقيع نهائياً عبر تجاوز الأمر
-_CODESIGN = :
-
 include $(THEOS_MAKE_PATH)/tweak.mk
