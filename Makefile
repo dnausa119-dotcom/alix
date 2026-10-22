@@ -8,6 +8,8 @@ TWEAK_NAME = FaustiOSHack
 FaustiOSHack_FILES = Tweak.mm
 FaustiOSHack_CFLAGS = -fobjc-arc -std=c++17
 FaustiOSHack_LIBRARIES = z
-codesign = echo
+
+# تعطيل التوقيع نهائياً لعدم توفر ldid في بيئة البناء
+codesign = /usr/bin/true
 
 include $(THEOS_MAKE_PATH)/tweak.mk
